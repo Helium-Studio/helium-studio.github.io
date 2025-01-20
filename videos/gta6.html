@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+  <title>GTA VI 抢先体验视频</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    .video-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    #video {
+      display: block;
+      width: 100%;
+    }
+    #mask {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.83);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .pop-container {
+      width: 250px;
+      height: 200px;
+      background: white;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    button {
+      width: 50px;
+      height: 30px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+ 
+<div class="video-container">
+  <video id="video" src="8245.mp4"> preload controls</video>
+</div>
+<div id="mask">
+  <div class="pop-container">
+    <p>GTA VI 抢先体验视频，严禁泄露</p>
+    <button onclick="playVideo()">确定</button>
+  </div>
+</div>
+<script>
+  function playVideo() {
+    document.getElementById('mask').style.display = 'none';
+    var video = document.querySelector('#video');
+    video.play();
+  }
+</script>
+</body>
+</html>
